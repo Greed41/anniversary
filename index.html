@@ -1,39 +1,21 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANNIVERSARY</title>
-    <link rel="stylesheet" href="anniversary.css">
-    <style>
-        img {
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ANIVERSARY</title>
+		<link rel="stylesheet" href="anniversary.css">
+	</head>
+	
+	<body>
 
-    <img id="image" src="Untitled.jpeg" alt="اضغط لإعادة تشغيل الأغنية">
-    
-    <audio id="audio" src="AlfeinNaam.mp3" autoplay muted></audio>
+		<div id="background-image"></div>
 
-    <script>
-        window.onload = function() {
-            let audio = document.getElementById("audio");
+		<audio controls src="AlfeinNaam.mp3" >
+		
+			<p> your browser does not support this content</p>
+		</audio>
 
-            // إزالة الكتم بعد تحميل الصفحة للسماح بالتشغيل التلقائي
-            audio.muted = false;
-
-            // عند الضغط على الصورة، يتم تشغيل الأغنية مرة أخرى
-            document.getElementById("image").addEventListener("click", function() {
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                    audio.pause();
-                }
-            });
-        };
-    </script>
-
-</body>
+	</body>
+	
 </html>
