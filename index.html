@@ -1,14 +1,46 @@
-g<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>test</title>
-		<link rel="stylesheet" href="anniversary.css">
-	</head>
-	<body>
-		<div id="blockchain.jpg"></div>
-		<audio controls>
-			<source src="AlfeinNaam.mp3" type="audio/mpeg"> <br>
-		</audio>
-	</body>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANNIVERSARY</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="image" src="Untitled.jpg" alt="اضغط لإعادة تشغيل الأغنية">
+    
+    <audio id="audio" src="AlfeinNaam.mp3" autoplay muted></audio>
+
+    <script>
+        window.onload = function() {
+            let audio = document.getElementById("audio");
+
+            // إزالة الكتم بعد تحميل الصفحة للسماح بالتشغيل التلقائي
+            audio.muted = false;
+
+            // عند الضغط على الصورة، يتم تشغيل الأغنية مرة أخرى
+            document.getElementById("image").addEventListener("click", function() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+        };
+    </script>
+
+</body>
 </html>
